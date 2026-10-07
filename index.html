@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kopi Kampus</title>
+    <title>Kopi Kampus | Coffee, Study & Chill</title>
 
     <!-- Bootstrap 5 CDN -->
     <link
@@ -13,342 +13,310 @@
     />
 
     <style>
-      /* ================================
-           WARNA UTAMA
-        ================================== */
-      :root {
-        --cokelat: #4b2e22;
-        --cokelat-muda: #7a513b;
-        --cream: #fff8ef;
-        --cream-gelap: #f3e4d2;
-        --hijau: #315c4b;
-        --emas: #d6a354;
-        --putih: #ffffff;
-        --abu: #6c625d;
-      }
-
-      /* ================================
-           BODY
-        ================================== */
-      body {
-        background: #fffaf5;
-        color: #332821;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+      /* =========================
+           GLOBAL
+        ========================= */
 
       html {
         scroll-behavior: smooth;
       }
 
-      /* ================================
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f8f5ef;
+        color: #3b2a20;
+      }
+
+      /* =========================
            NAVBAR
-        ================================== */
-      .navbar-kopi {
-        background: linear-gradient(90deg, #3c2418, #65432f, #3c2418);
+        ========================= */
+
+      .navbar {
+        background-color: #3b2a20 !important;
       }
 
       .navbar-brand {
-        font-weight: 800;
         font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 1px;
       }
 
       .navbar-brand span {
-        color: #e9c078;
+        color: #e8b86d;
       }
 
       .nav-link {
-        color: rgba(255, 255, 255, 0.9) !important;
-        font-weight: 500;
-        margin: 0 5px;
+        color: white !important;
+        margin-left: 10px;
+        transition: 0.3s;
       }
 
       .nav-link:hover {
-        color: #e9c078 !important;
+        color: #e8b86d !important;
       }
 
-      /* ================================
+      /* =========================
            HERO
-        ================================== */
+        ========================= */
+
       .hero {
-        min-height: 500px;
+        background:
+          linear-gradient(rgba(59, 42, 32, 0.88), rgba(91, 62, 43, 0.88)),
+          linear-gradient(135deg, #3b2a20, #8b5e3c);
+
+        color: white;
+        min-height: 550px;
+
         display: flex;
         align-items: center;
-        background: linear-gradient(
-          135deg,
-          rgba(59, 35, 24, 0.97),
-          rgba(112, 76, 51, 0.9),
-          rgba(218, 170, 91, 0.65)
-        );
-        color: white;
-        position: relative;
-        overflow: hidden;
-      }
+        justify-content: center;
 
-      .hero::before {
-        content: "☕";
-        position: absolute;
-        right: 7%;
-        top: 15%;
-        font-size: 180px;
-        opacity: 0.12;
-      }
-
-      .hero::after {
-        content: "✦";
-        position: absolute;
-        left: 8%;
-        bottom: 12%;
-        font-size: 100px;
-        opacity: 0.1;
+        text-align: center;
+        padding: 80px 20px;
       }
 
       .hero-content {
-        position: relative;
-        z-index: 2;
+        max-width: 850px;
       }
 
       .hero-badge {
         display: inline-block;
-        background: #e8bd6d;
-        color: #3b261a;
-        font-weight: 700;
-        padding: 8px 16px;
+        background-color: #e8b86d;
+        color: #3b2a20;
+        padding: 8px 18px;
         border-radius: 50px;
+        font-weight: bold;
         margin-bottom: 20px;
       }
 
       .hero h1 {
-        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-size: 3.5rem;
         font-weight: 800;
-        line-height: 1.05;
+        margin-bottom: 20px;
       }
 
       .hero p {
-        font-size: 1.15rem;
-        max-width: 650px;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
       }
 
       .btn-kopi {
-        background: #e1b45f;
-        color: #3b261a;
+        background-color: #e8b86d;
+        color: #3b2a20;
         border: none;
-        font-weight: 700;
-        padding: 12px 25px;
-        border-radius: 12px;
+        padding: 12px 28px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: 0.3s;
       }
 
       .btn-kopi:hover {
-        background: #f0cb82;
-        color: #3b261a;
+        background-color: #f1c982;
+        color: #3b2a20;
+        transform: translateY(-2px);
       }
 
-      /* ================================
+      /* =========================
            SECTION
-        ================================== */
+        ========================= */
+
       .section-title {
         font-weight: 800;
-        color: var(--cokelat);
+        color: #3b2a20;
+        margin-bottom: 10px;
       }
 
       .section-subtitle {
-        color: var(--abu);
+        color: #765f50;
+        margin-bottom: 40px;
       }
 
-      /* ================================
-           CATEGORY BUTTON
-        ================================== */
-      .category-btn {
-        border: 1px solid #d8c1aa;
-        color: var(--cokelat);
-        background: white;
-        border-radius: 50px;
-        padding: 9px 18px;
-        font-weight: 600;
+      .menu-section {
+        padding: 80px 0;
       }
 
-      .category-btn:hover,
-      .category-btn.active {
-        background: var(--cokelat);
-        color: white;
+      /* =========================
+           CATEGORY
+        ========================= */
+
+      .category-title {
+        font-weight: 800;
+        color: #5b3b27;
+        border-left: 6px solid #e8b86d;
+        padding-left: 15px;
+        margin-bottom: 25px;
       }
 
-      /* ================================
+      /* =========================
            MENU CARD
-        ================================== */
+        ========================= */
+
       .menu-card {
-        border: none;
-        border-radius: 20px;
-        overflow: hidden;
         height: 100%;
-        background: white;
-        box-shadow: 0 8px 25px rgba(75, 46, 34, 0.1);
-        transition: 0.25s ease;
+        border: none;
+        border-radius: 18px;
+        overflow: hidden;
+        background-color: white;
+
+        box-shadow: 0 8px 25px rgba(59, 42, 32, 0.1);
+
+        transition: 0.3s;
       }
 
       .menu-card:hover {
         transform: translateY(-7px);
-        box-shadow: 0 15px 35px rgba(75, 46, 34, 0.17);
+        box-shadow: 0 15px 30px rgba(59, 42, 32, 0.16);
       }
 
       .menu-icon {
-        height: 160px;
+        height: 150px;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 75px;
-        background: linear-gradient(135deg, #f2dfca, #fff7ec);
+
+        font-size: 4.5rem;
+
+        background: linear-gradient(135deg, #f4dfb5, #ead0a0);
       }
 
       .menu-card .card-body {
-        padding: 20px;
+        padding: 22px;
       }
 
       .menu-card .card-title {
-        color: var(--cokelat);
-        font-weight: 800;
+        font-weight: 700;
+        color: #3b2a20;
+        margin-bottom: 10px;
       }
 
-      .menu-description {
-        color: var(--abu);
-        font-size: 0.92rem;
+      .menu-card .card-text {
+        color: #765f50;
         min-height: 45px;
       }
 
       .price {
-        color: var(--hijau);
+        color: #8b5e3c;
         font-size: 1.1rem;
         font-weight: 800;
       }
 
-      .btn-tambah {
-        background: var(--cokelat);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        font-weight: 600;
+      /* =========================
+           ABOUT
+        ========================= */
+
+      .about-section {
+        background-color: #fff;
+        padding: 80px 0;
       }
 
-      .btn-tambah:hover {
-        background: var(--cokelat-muda);
-        color: white;
-      }
-
-      /* ================================
-           KERANJANG
-        ================================== */
-      .cart-item {
-        border-bottom: 1px solid #eee0d2;
-        padding: 15px 0;
-      }
-
-      .cart-item:last-child {
-        border-bottom: none;
-      }
-
-      .quantity-btn {
-        width: 32px;
-        height: 32px;
-        border: none;
-        border-radius: 8px;
-        background: #eee0d2;
-        color: var(--cokelat);
-        font-weight: bold;
-      }
-
-      .quantity-btn:hover {
-        background: #d8bea2;
-      }
-
-      .cart-badge {
-        position: relative;
-        top: -2px;
-      }
-
-      /* ================================
-           TENTANG
-        ================================== */
       .about-box {
-        background: linear-gradient(135deg, #fff, #fff4e6);
-        border-radius: 25px;
-        box-shadow: 0 8px 25px rgba(75, 46, 34, 0.08);
+        background-color: #f8f5ef;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(59, 42, 32, 0.08);
       }
 
       .about-icon {
-        font-size: 45px;
+        font-size: 3rem;
       }
 
-      /* ================================
-           FORM
-        ================================== */
+      /* =========================
+           CONTACT
+        ========================= */
+
       .contact-section {
-        background: #f7ede2;
+        padding: 80px 0;
+        background-color: #f3ede4;
+      }
+
+      .contact-card {
+        background-color: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(59, 42, 32, 0.1);
+      }
+
+      .form-label {
+        font-weight: 600;
       }
 
       .form-control {
-        border: 1px solid #dcc8b5;
         border-radius: 10px;
-        padding: 12px 15px;
+        padding: 12px;
+        border: 1px solid #d7c8b8;
       }
 
       .form-control:focus {
-        border-color: #8b6248;
-        box-shadow: 0 0 0 0.2rem rgba(139, 98, 72, 0.15);
+        border-color: #8b5e3c;
+        box-shadow: 0 0 0 0.2rem rgba(139, 94, 60, 0.15);
       }
 
-      /* ================================
+      /* =========================
            FOOTER
-        ================================== */
+        ========================= */
+
       footer {
-        background: #302018;
+        background-color: #3b2a20;
         color: white;
+        padding: 30px 0;
+        text-align: center;
       }
 
-      footer a {
-        color: #e9c078;
-        text-decoration: none;
+      footer span {
+        color: #e8b86d;
       }
 
-      /* ================================
+      /* =========================
            RESPONSIVE
-        ================================== */
+        ========================= */
+
       @media (max-width: 768px) {
         .hero {
-          min-height: 450px;
-          text-align: center;
+          min-height: 500px;
+          padding: 70px 20px;
         }
 
         .hero h1 {
-          font-size: 2.8rem;
+          font-size: 2.3rem;
         }
 
         .hero p {
           font-size: 1rem;
         }
 
-        .hero::before {
-          font-size: 110px;
-          right: 0;
+        .menu-section {
+          padding: 55px 0;
         }
 
-        .menu-icon {
-          height: 140px;
+        .section-title {
+          font-size: 1.8rem;
         }
 
-        .category-btn {
-          font-size: 0.9rem;
-          padding: 8px 13px;
+        .category-title {
+          font-size: 1.4rem;
+        }
+
+        .about-section,
+        .contact-section {
+          padding: 55px 0;
+        }
+
+        .about-box,
+        .contact-card {
+          padding: 25px;
         }
       }
     </style>
   </head>
 
   <body>
-    <!-- ==================================================
+    <!-- =========================
      NAVBAR
-================================================== -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark navbar-kopi sticky-top shadow-sm"
-    >
+========================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#beranda">
           ☕ <span>Kopi</span> Kampus
@@ -359,948 +327,709 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarMenu"
-          aria-controls="navbarMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarMenu">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#beranda">Beranda</a>
+              <a class="nav-link" href="#beranda"> Beranda </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#menu">Menu</a>
+              <a class="nav-link" href="#menu"> Menu </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#tentang">Tentang</a>
+              <a class="nav-link" href="#tentang"> Tentang </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#kontak">Kontak</a>
-            </li>
-
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <button
-                class="btn btn-warning fw-bold"
-                data-bs-toggle="modal"
-                data-bs-target="#cartModal"
-                onclick="tampilkanKeranjang()"
-              >
-                🛒 Keranjang
-                <span id="cartCount" class="badge text-bg-dark cart-badge"
-                  >0</span
-                >
-              </button>
+              <a class="nav-link" href="#kontak"> Kontak </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- ==================================================
+    <!-- =========================
      HERO
-================================================== -->
+========================= -->
+
     <section id="beranda" class="hero">
-      <div class="container hero-content">
-        <div class="row">
-          <div class="col-lg-8">
-            <span class="hero-badge"> ☕ TEMPAT NGOPI ANAK KAMPUS </span>
+      <div class="hero-content">
+        <div class="hero-badge">☕ COFFEE • STUDY • CHILL</div>
 
-            <h1>
-              Ngopi, Nugas,<br />
-              dan Nongkrong.
-            </h1>
+        <h1>
+          Ngopi Santai,<br />
+          Nugas Sampai Jadi.
+        </h1>
 
-            <p class="mt-4 mb-4">
-              Selamat datang di Kopi Kampus. Tempat sederhana untuk menikmati
-              kopi, menyelesaikan tugas, dan ngobrol bareng teman.
-            </p>
+        <p>
+          Tempat ngopi favorit mahasiswa untuk menikmati kopi, mengerjakan
+          tugas, berdiskusi, dan nongkrong bareng teman.
+        </p>
 
-            <a href="#menu" class="btn btn-kopi btn-lg"> Lihat Menu ☕ </a>
-          </div>
-        </div>
+        <a href="#menu" class="btn btn-kopi"> Lihat Menu ☕ </a>
       </div>
     </section>
 
-    <!-- ==================================================
+    <!-- =========================
      MENU
-================================================== -->
-    <section id="menu" class="py-5">
+========================= -->
+
+    <section id="menu" class="menu-section">
       <div class="container">
-        <div class="text-center mb-4">
-          <p class="text-uppercase fw-bold text-secondary mb-2">Menu Favorit</p>
+        <div class="text-center mb-5">
+          <h2 class="section-title">Menu Kopi Kampus</h2>
 
-          <h2 class="section-title display-6">Pilihan Menu Kopi Kampus</h2>
-
-          <p class="section-subtitle">Pilih minuman dan makanan favoritmu.</p>
-        </div>
-
-        <!-- CATEGORY -->
-        <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
-          <button
-            class="category-btn active"
-            onclick="filterMenu('semua', this)"
-          >
-            Semua
-          </button>
-
-          <button class="category-btn" onclick="filterMenu('kopi', this)">
-            ☕ Kopi
-          </button>
-
-          <button class="category-btn" onclick="filterMenu('roti', this)">
-            🥐 Roti & Pastry
-          </button>
-
-          <button class="category-btn" onclick="filterMenu('non-kopi', this)">
-            🍵 Non-Kopi
-          </button>
-
-          <button class="category-btn" onclick="filterMenu('makanan', this)">
-            🍟 Makanan
-          </button>
-        </div>
-
-        <!-- MENU GRID -->
-        <div class="row g-4" id="menuContainer">
-          <!-- ================= KOPI ================= -->
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Kopi Susu Gula Aren</h5>
-                <p class="menu-description">
-                  Espresso, susu creamy, dan gula aren.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp18.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Kopi Susu Gula Aren', 18000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Kopi Susu Pandan</h5>
-                <p class="menu-description">
-                  Kopi susu dengan aroma pandan yang manis.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp19.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Kopi Susu Pandan', 19000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">🧋</div>
-              <div class="card-body">
-                <h5 class="card-title">Kopi Susu Caramel</h5>
-                <p class="menu-description">
-                  Perpaduan kopi, susu, dan caramel.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp20.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Kopi Susu Caramel', 20000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Americano</h5>
-                <p class="menu-description">
-                  Espresso dengan air, cocok untuk teman nugas.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp15.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Americano', 15000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Cappuccino</h5>
-                <p class="menu-description">
-                  Espresso dengan susu dan foam lembut.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp21.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Cappuccino', 21000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Cafe Latte</h5>
-                <p class="menu-description">
-                  Espresso dan susu dengan rasa lembut.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp20.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Cafe Latte', 20000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">🍫</div>
-              <div class="card-body">
-                <h5 class="card-title">Mochaccino</h5>
-                <p class="menu-description">
-                  Kopi dengan perpaduan cokelat dan susu.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp22.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Mochaccino', 22000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Vanilla Latte</h5>
-                <p class="menu-description">
-                  Latte lembut dengan rasa vanilla.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp21.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Vanilla Latte', 21000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Hazelnut Latte</h5>
-                <p class="menu-description">
-                  Latte dengan aroma hazelnut yang khas.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp22.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Hazelnut Latte', 22000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Caramel Macchiato</h5>
-                <p class="menu-description">Kopi creamy dengan saus caramel.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp23.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Caramel Macchiato', 23000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Espresso</h5>
-                <p class="menu-description">
-                  Kopi pekat dengan karakter rasa kuat.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp13.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Espresso', 13000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Long Black</h5>
-                <p class="menu-description">
-                  Espresso dengan air panas yang lebih bold.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp15.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Long Black', 15000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">☕</div>
-              <div class="card-body">
-                <h5 class="card-title">Kopi Hitam Kampus</h5>
-                <p class="menu-description">
-                  Kopi hitam sederhana untuk menemani belajar.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp12.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Kopi Hitam Kampus', 12000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">🍫</div>
-              <div class="card-body">
-                <h5 class="card-title">Kopi Susu Cokelat</h5>
-                <p class="menu-description">
-                  Kopi susu dengan rasa cokelat yang creamy.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp20.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Kopi Susu Cokelat', 20000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="kopi">
-            <div class="card menu-card">
-              <div class="menu-icon">⭐</div>
-              <div class="card-body">
-                <h5 class="card-title">Kopi Kampus Signature</h5>
-                <p class="menu-description">
-                  Menu spesial racikan khas Kopi Kampus.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp24.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Kopi Kampus Signature', 24000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ================= ROTI ================= -->
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="roti">
-            <div class="card menu-card">
-              <div class="menu-icon">🥐</div>
-              <div class="card-body">
-                <h5 class="card-title">Croissant Original</h5>
-                <p class="menu-description">
-                  Pastry renyah dengan rasa butter.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp14.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Croissant Original', 14000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="roti">
-            <div class="card menu-card">
-              <div class="menu-icon">🥐</div>
-              <div class="card-body">
-                <h5 class="card-title">Croissant Cokelat</h5>
-                <p class="menu-description">
-                  Croissant renyah dengan isian cokelat.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp16.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Croissant Cokelat', 16000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="roti">
-            <div class="card menu-card">
-              <div class="menu-icon">🍞</div>
-              <div class="card-body">
-                <h5 class="card-title">Roti Bakar Cokelat</h5>
-                <p class="menu-description">
-                  Roti panggang dengan cokelat manis.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp15.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Roti Bakar Cokelat', 15000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="roti">
-            <div class="card menu-card">
-              <div class="menu-icon">🍞</div>
-              <div class="card-body">
-                <h5 class="card-title">Roti Bakar Keju</h5>
-                <p class="menu-description">Roti bakar gurih dengan keju.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp16.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Roti Bakar Keju', 16000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4 menu-item" data-category="roti">
-            <div class="card menu-card">
-              <div class="menu-icon">🍞</div>
-              <div class="card-body">
-                <h5 class="card-title">Roti Bakar Cokelat Keju</h5>
-                <p class="menu-description">
-                  Perpaduan cokelat dan keju favorit mahasiswa.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp18.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Roti Bakar Cokelat Keju', 18000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ================= NON KOPI ================= -->
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="non-kopi"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🍵</div>
-              <div class="card-body">
-                <h5 class="card-title">Matcha Latte</h5>
-                <p class="menu-description">Matcha creamy dengan susu segar.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp21.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Matcha Latte', 21000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="non-kopi"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🍫</div>
-              <div class="card-body">
-                <h5 class="card-title">Chocolate Latte</h5>
-                <p class="menu-description">
-                  Cokelat creamy untuk teman santai.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp20.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Chocolate Latte', 20000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="non-kopi"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">💜</div>
-              <div class="card-body">
-                <h5 class="card-title">Taro Latte</h5>
-                <p class="menu-description">
-                  Minuman taro creamy dengan rasa lembut.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp20.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Taro Latte', 20000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="non-kopi"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🍰</div>
-              <div class="card-body">
-                <h5 class="card-title">Red Velvet</h5>
-                <p class="menu-description">
-                  Minuman creamy dengan rasa red velvet.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp21.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Red Velvet', 21000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="non-kopi"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🍋</div>
-              <div class="card-body">
-                <h5 class="card-title">Lemon Tea</h5>
-                <p class="menu-description">Teh segar dengan rasa lemon.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp13.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Lemon Tea', 13000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ================= MAKANAN ================= -->
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="makanan"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🍟</div>
-              <div class="card-body">
-                <h5 class="card-title">French Fries</h5>
-                <p class="menu-description">Kentang goreng renyah dan gurih.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp15.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('French Fries', 15000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="makanan"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🍗</div>
-              <div class="card-body">
-                <h5 class="card-title">Chicken Popcorn</h5>
-                <p class="menu-description">
-                  Potongan ayam crispy untuk teman ngobrol.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp20.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Chicken Popcorn', 20000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="makanan"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🍝</div>
-              <div class="card-body">
-                <h5 class="card-title">Pasta Creamy</h5>
-                <p class="menu-description">
-                  Pasta creamy yang cocok untuk makan siang.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp25.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Pasta Creamy', 25000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="makanan"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🌭</div>
-              <div class="card-body">
-                <h5 class="card-title">Sosis Bakar</h5>
-                <p class="menu-description">Sosis bakar dengan saus pilihan.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp17.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Sosis Bakar', 17000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 menu-item"
-            data-category="makanan"
-          >
-            <div class="card menu-card">
-              <div class="menu-icon">🥞</div>
-              <div class="card-body">
-                <h5 class="card-title">Pancake</h5>
-                <p class="menu-description">
-                  Pancake lembut dengan topping manis.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="price">Rp19.000</span>
-                  <button
-                    class="btn btn-tambah"
-                    onclick="tambahKeranjang('Pancake', 19000)"
-                  >
-                    + Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================================================
-     TENTANG KOPI KAMPUS
-================================================== -->
-    <section id="tentang" class="py-5">
-      <div class="container">
-        <div class="about-box p-4 p-md-5">
-          <div class="row align-items-center g-4">
-            <div class="col-md-7">
-              <p class="text-uppercase fw-bold text-secondary">Tentang Kami</p>
-
-              <h2 class="section-title">Kopi Kampus, Teman Setia Mahasiswa</h2>
-
-              <p class="mt-3 text-secondary">
-                Kopi Kampus adalah konsep kedai kopi yang dibuat untuk
-                mahasiswa. Tempatnya nyaman untuk mengerjakan tugas, berdiskusi,
-                atau sekadar nongkrong bersama teman.
-              </p>
-
-              <p class="text-secondary">
-                Dengan harga yang ramah mahasiswa dan berbagai pilihan menu,
-                Kopi Kampus siap menemani hari-hari kuliahmu.
-              </p>
-            </div>
-
-            <div class="col-md-5">
-              <div class="row g-3 text-center">
-                <div class="col-4">
-                  <div class="about-icon">☕</div>
-                  <small class="fw-bold">Kopi</small>
-                </div>
-
-                <div class="col-4">
-                  <div class="about-icon">📚</div>
-                  <small class="fw-bold">Nugas</small>
-                </div>
-
-                <div class="col-4">
-                  <div class="about-icon">👥</div>
-                  <small class="fw-bold">Nongkrong</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================================================
-     FORM KONTAK
-================================================== -->
-    <section id="kontak" class="contact-section py-5">
-      <div class="container">
-        <div class="text-center mb-4">
-          <p class="text-uppercase fw-bold text-secondary">Hubungi Kami</p>
-
-          <h2 class="section-title">Ada Pesan untuk Kopi Kampus?</h2>
-
-          <p class="text-secondary">
-            Kirim pesan atau saran melalui form berikut.
+          <p class="section-subtitle">
+            Pilihan minuman dan makanan yang cocok menemani aktivitasmu.
           </p>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-7">
-            <form id="contactForm">
-              <div class="mb-3">
-                <label for="nama" class="form-label fw-bold"> Nama </label>
+        <!-- =========================
+             COFFEE
+        ========================= -->
 
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nama"
-                  placeholder="Masukkan nama kamu"
-                  required
-                />
+        <h3 class="category-title">☕ Coffee</h3>
+
+        <div class="row g-4 mb-5">
+          <!-- 1 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">☕</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Kopi Susu Gula Aren</h5>
+
+                <p class="card-text">
+                  Perpaduan kopi, susu dan manisnya gula aren.
+                </p>
+
+                <div class="price">Rp18.000</div>
               </div>
+            </div>
+          </div>
 
-              <div class="mb-3">
-                <label for="email" class="form-label fw-bold"> Email </label>
+          <!-- 2 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🥛</div>
 
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="nama@email.com"
-                  required
-                />
+              <div class="card-body">
+                <h5 class="card-title">Es Kopi Susu</h5>
+
+                <p class="card-text">
+                  Kopi susu dingin yang creamy dan menyegarkan.
+                </p>
+
+                <div class="price">Rp16.000</div>
               </div>
+            </div>
+          </div>
 
-              <div class="mb-3">
-                <label for="pesan" class="form-label fw-bold"> Pesan </label>
+          <!-- 3 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍯</div>
 
-                <textarea
-                  class="form-control"
-                  id="pesan"
-                  rows="5"
-                  placeholder="Tulis pesan kamu..."
-                  required
-                ></textarea>
+              <div class="card-body">
+                <h5 class="card-title">Kopi Susu Caramel</h5>
+
+                <p class="card-text">
+                  Kopi susu dengan rasa caramel yang lembut.
+                </p>
+
+                <div class="price">Rp20.000</div>
               </div>
+            </div>
+          </div>
 
-              <button
-                type="button"
-                class="btn btn-dark w-100 py-2"
-                data-bs-toggle="modal"
-                data-bs-target="#confirmModal"
-              >
-                Kirim Pesan
-              </button>
-            </form>
+          <!-- 4 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🌰</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Kopi Susu Hazelnut</h5>
+
+                <p class="card-text">
+                  Kopi susu dengan aroma hazelnut yang khas.
+                </p>
+
+                <div class="price">Rp20.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍦</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Kopi Susu Vanilla</h5>
+
+                <p class="card-text">Kopi creamy dengan sentuhan vanilla.</p>
+
+                <div class="price">Rp20.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🧊</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Americano</h5>
+
+                <p class="card-text">
+                  Kopi hitam dengan rasa kuat dan sederhana.
+                </p>
+
+                <div class="price">Rp14.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🧊</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Iced Americano</h5>
+
+                <p class="card-text">
+                  Americano dingin untuk menemani belajar.
+                </p>
+
+                <div class="price">Rp15.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">☕</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Cappuccino</h5>
+
+                <p class="card-text">
+                  Espresso dengan susu dan foam yang lembut.
+                </p>
+
+                <div class="price">Rp19.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🥛</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Cafe Latte</h5>
+
+                <p class="card-text">Espresso dengan susu yang creamy.</p>
+
+                <div class="price">Rp19.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍫</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Mocha Latte</h5>
+
+                <p class="card-text">Kombinasi kopi, susu dan cokelat.</p>
+
+                <div class="price">Rp21.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍮</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Caramel Macchiato</h5>
+
+                <p class="card-text">Kopi creamy dengan caramel yang manis.</p>
+
+                <div class="price">Rp22.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">☕</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Espresso</h5>
+
+                <p class="card-text">Kopi pekat dengan rasa yang kuat.</p>
+
+                <div class="price">Rp12.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍋</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Espresso Tonic</h5>
+
+                <p class="card-text">Espresso dengan tonic yang segar.</p>
+
+                <div class="price">Rp20.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🌿</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Kopi Pandan</h5>
+
+                <p class="card-text">
+                  Kopi susu dengan aroma pandan yang wangi.
+                </p>
+
+                <div class="price">Rp19.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15 -->
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍫</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Kopi Cokelat</h5>
+
+                <p class="card-text">Kopi dengan perpaduan rasa cokelat.</p>
+
+                <div class="price">Rp19.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================
+             ROTI & PASTRY
+        ========================= -->
+
+        <h3 class="category-title">🥐 Roti & Pastry</h3>
+
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍞</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Roti Bakar Cokelat</h5>
+
+                <p class="card-text">Roti bakar dengan isian cokelat.</p>
+
+                <div class="price">Rp12.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🧀</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Roti Bakar Keju</h5>
+
+                <p class="card-text">Roti bakar dengan topping keju.</p>
+
+                <div class="price">Rp13.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍫</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Roti Bakar Cokelat Keju</h5>
+
+                <p class="card-text">Kombinasi cokelat dan keju yang nikmat.</p>
+
+                <div class="price">Rp15.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🥐</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Croissant Butter</h5>
+
+                <p class="card-text">Croissant renyah dengan rasa butter.</p>
+
+                <div class="price">Rp15.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🥐</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Croissant Cokelat</h5>
+
+                <p class="card-text">Croissant dengan isian cokelat.</p>
+
+                <div class="price">Rp17.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================
+             SNACK & DESSERT
+        ========================= -->
+
+        <h3 class="category-title">🍰 Snack & Dessert</h3>
+
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍫</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Brownies Cokelat</h5>
+
+                <p class="card-text">Brownies lembut dengan rasa cokelat.</p>
+
+                <div class="price">Rp12.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍌</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Pisang Cokelat</h5>
+
+                <p class="card-text">Pisang goreng dengan topping cokelat.</p>
+
+                <div class="price">Rp12.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍟</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Kentang Goreng</h5>
+
+                <p class="card-text">
+                  Kentang goreng renyah untuk teman ngobrol.
+                </p>
+
+                <div class="price">Rp14.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍩</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Donat Gula</h5>
+
+                <p class="card-text">Donat lembut dengan taburan gula.</p>
+
+                <div class="price">Rp9.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍪</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Cookies Choco Chip</h5>
+
+                <p class="card-text">Cookies renyah dengan choco chip.</p>
+
+                <div class="price">Rp10.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================
+             NON COFFEE
+        ========================= -->
+
+        <h3 class="category-title">🥤 Non-Coffee</h3>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍵</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Matcha Latte</h5>
+
+                <p class="card-text">Matcha creamy dengan rasa yang lembut.</p>
+
+                <div class="price">Rp20.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍫</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Latte</h5>
+
+                <p class="card-text">Minuman cokelat creamy dan manis.</p>
+
+                <div class="price">Rp18.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍰</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Red Velvet Latte</h5>
+
+                <p class="card-text">Minuman creamy dengan rasa red velvet.</p>
+
+                <div class="price">Rp20.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">💜</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Taro Latte</h5>
+
+                <p class="card-text">Taro lembut dengan rasa manis yang pas.</p>
+
+                <div class="price">Rp19.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card menu-card">
+              <div class="menu-icon">🍋</div>
+
+              <div class="card-body">
+                <h5 class="card-title">Lemon Tea</h5>
+
+                <p class="card-text">
+                  Teh lemon segar untuk menemani aktivitas.
+                </p>
+
+                <div class="price">Rp12.000</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================================================
-     MODAL KERANJANG
-================================================== -->
-    <div class="modal fade" id="cartModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title fw-bold">🛒 Keranjang Pesanan</h5>
+    <!-- =========================
+     TENTANG KAMI
+========================= -->
 
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-            ></button>
-          </div>
+    <section id="tentang" class="about-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Tentang Kopi Kampus</h2>
 
-          <div class="modal-body">
-            <div id="cartItems">
-              <p class="text-center text-secondary">Keranjang masih kosong.</p>
-            </div>
+          <p class="section-subtitle">
+            Bukan cuma tempat ngopi, tapi tempat bertemu dan bertukar cerita.
+          </p>
+        </div>
 
-            <hr />
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="about-box text-center h-100">
+              <div class="about-icon">☕</div>
 
-            <div class="d-flex justify-content-between align-items-center">
-              <h5 class="fw-bold mb-0">Total</h5>
+              <h4 class="mt-3">Kopi Berkualitas</h4>
 
-              <h5 class="fw-bold text-success mb-0" id="cartTotal">Rp0</h5>
+              <p>
+                Kami menyediakan berbagai pilihan kopi yang cocok untuk menemani
+                aktivitas mahasiswa.
+              </p>
             </div>
           </div>
 
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Lanjut Belanja
-            </button>
+          <div class="col-md-4">
+            <div class="about-box text-center h-100">
+              <div class="about-icon">📚</div>
 
-            <button
-              type="button"
-              class="btn btn-success"
-              onclick="pesanSekarang()"
-            >
-              🛍️ Pesan Sekarang
-            </button>
+              <h4 class="mt-3">Tempat Nugas</h4>
+
+              <p>
+                Suasana nyaman untuk mengerjakan tugas, belajar, berdiskusi dan
+                mengerjakan project.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="about-box text-center h-100">
+              <div class="about-icon">👥</div>
+
+              <h4 class="mt-3">Tempat Nongkrong</h4>
+
+              <p>
+                Tempat santai untuk ngobrol dan berkumpul bersama teman-teman
+                kampus.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ==================================================
-     MODAL KONFIRMASI PESANAN
-================================================== -->
-    <div class="modal fade" id="orderModal" tabindex="-1">
+    <!-- =========================
+     KONTAK
+========================= -->
+
+    <section id="kontak" class="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-card">
+              <div class="text-center mb-4">
+                <h2 class="section-title">Hubungi Kami</h2>
+
+                <p class="section-subtitle mb-0">
+                  Ada pertanyaan atau ingin memberikan pesan? Silakan hubungi
+                  Kopi Kampus.
+                </p>
+              </div>
+
+              <form>
+                <!-- Nama -->
+
+                <div class="mb-3">
+                  <label for="nama" class="form-label"> Nama </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nama"
+                    placeholder="Masukkan nama kamu"
+                    required
+                  />
+                </div>
+
+                <!-- Email -->
+
+                <div class="mb-3">
+                  <label for="email" class="form-label"> Email </label>
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="nama@email.com"
+                    required
+                  />
+                </div>
+
+                <!-- Pesan -->
+
+                <div class="mb-3">
+                  <label for="pesan" class="form-label"> Pesan </label>
+
+                  <textarea
+                    class="form-control"
+                    id="pesan"
+                    rows="5"
+                    placeholder="Tulis pesan kamu..."
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Tombol Modal -->
+
+                <div class="text-center">
+                  <button
+                    type="button"
+                    class="btn btn-kopi"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalKonfirmasi"
+                  >
+                    Kirim Pesan
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     MODAL
+========================= -->
+
+    <div
+      class="modal fade"
+      id="modalKonfirmasi"
+      tabindex="-1"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title fw-bold">Pesanan Berhasil Dibuat 🎉</h5>
+            <h5 class="modal-title" id="modalLabel">Konfirmasi Pesan</h5>
 
             <button
               type="button"
@@ -1310,48 +1039,9 @@
           </div>
 
           <div class="modal-body text-center">
-            <div style="font-size: 60px">☕</div>
+            <div style="font-size: 3rem">☕</div>
 
-            <h5 class="fw-bold mt-3">Terima kasih sudah memesan!</h5>
-
-            <p class="text-secondary">
-              Pesanan kamu sedang diproses oleh Kopi Kampus.
-            </p>
-
-            <p class="fw-bold" id="orderTotal">Total: Rp0</p>
-          </div>
-
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-dark w-100"
-              data-bs-dismiss="modal"
-            >
-              Oke, Siap!
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================================================
-     MODAL KONFIRMASI FORM
-================================================== -->
-    <div class="modal fade" id="confirmModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title fw-bold">Konfirmasi Pesan</h5>
-
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-            ></button>
-          </div>
-
-          <div class="modal-body">
-            Apakah Anda yakin ingin mengirim pesan ini?
+            <p class="mt-3 mb-0">Apakah Anda yakin ingin mengirim pesan ini?</p>
           </div>
 
           <div class="modal-footer">
@@ -1365,8 +1055,13 @@
 
             <button
               type="button"
-              class="btn btn-primary"
-              onclick="kirimPesan()"
+              class="btn btn-kopi"
+              data-bs-dismiss="modal"
+              onclick="
+                alert(
+                  'Pesan berhasil dikirim! Terima kasih sudah menghubungi Kopi Kampus ☕',
+                )
+              "
             >
               Ya, Kirim
             </button>
@@ -1375,314 +1070,19 @@
       </div>
     </div>
 
-    <!-- ==================================================
+    <!-- =========================
      FOOTER
-================================================== -->
-    <footer class="py-4">
-      <div class="container text-center">
-        <div class="fs-4 mb-2">☕ Kopi Kampus</div>
+========================= -->
 
-        <p class="mb-1">Ngopi • Nugas • Nongkrong</p>
+    <footer>
+      <div class="container">
+        <p class="mb-1">☕ <span>Kopi Kampus</span></p>
 
-        <small class="text-white-50">
-          © 2026 Pemrograman Internet — Bootstrap 5
-        </small>
+        <p class="mb-0">© 2026 Kopi Kampus — Coffee, Study & Chill</p>
       </div>
     </footer>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      /* ==========================================
-       DATA KERANJANG
-    ========================================== */
-
-      let keranjang = [];
-
-      /* ==========================================
-       TAMBAH MENU KE KERANJANG
-    ========================================== */
-
-      function tambahKeranjang(nama, harga) {
-        const menuSudahAda = keranjang.find((item) => item.nama === nama);
-
-        if (menuSudahAda) {
-          menuSudahAda.jumlah++;
-        } else {
-          keranjang.push({
-            nama: nama,
-            harga: harga,
-            jumlah: 1,
-          });
-        }
-
-        updateCartCount();
-
-        alert(nama + " berhasil ditambahkan ke keranjang!");
-      }
-
-      /* ==========================================
-       UPDATE JUMLAH BADGE KERANJANG
-    ========================================== */
-
-      function updateCartCount() {
-        let totalItem = 0;
-
-        keranjang.forEach(function (item) {
-          totalItem += item.jumlah;
-        });
-
-        document.getElementById("cartCount").innerText = totalItem;
-      }
-
-      /* ==========================================
-       TAMPILKAN KERANJANG
-    ========================================== */
-
-      function tampilkanKeranjang() {
-        const cartItems = document.getElementById("cartItems");
-
-        const cartTotal = document.getElementById("cartTotal");
-
-        if (keranjang.length === 0) {
-          cartItems.innerHTML = `
-                <div class="text-center py-4">
-                    <div style="font-size: 55px;">🛒</div>
-                    <p class="text-secondary mt-2">
-                        Keranjang kamu masih kosong.
-                    </p>
-                </div>
-            `;
-
-          cartTotal.innerText = "Rp0";
-
-          return;
-        }
-
-        let html = "";
-        let total = 0;
-
-        keranjang.forEach(function (item, index) {
-          const subtotal = item.harga * item.jumlah;
-
-          total += subtotal;
-
-          html += `
-                <div class="cart-item">
-
-                    <div class="row align-items-center g-2">
-
-                        <div class="col-12 col-md-5">
-
-                            <strong>
-                                ${item.nama}
-                            </strong>
-
-                            <div class="text-secondary small">
-                                ${formatRupiah(item.harga)}
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-7 col-md-4">
-
-                            <div class="d-flex align-items-center gap-2">
-
-                                <button
-                                    class="quantity-btn"
-                                    onclick="kurangiJumlah(${index})">
-
-                                    −
-
-                                </button>
-
-                                <strong>
-                                    ${item.jumlah}
-                                </strong>
-
-                                <button
-                                    class="quantity-btn"
-                                    onclick="tambahJumlah(${index})">
-
-                                    +
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-5 col-md-3 text-end">
-
-                            <strong>
-                                ${formatRupiah(subtotal)}
-                            </strong>
-
-                            <br>
-
-                            <button
-                                class="btn btn-sm btn-outline-danger mt-1"
-                                onclick="hapusItem(${index})">
-
-                                Hapus
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            `;
-        });
-
-        cartItems.innerHTML = html;
-
-        cartTotal.innerText = formatRupiah(total);
-      }
-
-      /* ==========================================
-       TAMBAH JUMLAH
-    ========================================== */
-
-      function tambahJumlah(index) {
-        keranjang[index].jumlah++;
-
-        updateCartCount();
-
-        tampilkanKeranjang();
-      }
-
-      /* ==========================================
-       KURANGI JUMLAH
-    ========================================== */
-
-      function kurangiJumlah(index) {
-        keranjang[index].jumlah--;
-
-        if (keranjang[index].jumlah <= 0) {
-          keranjang.splice(index, 1);
-        }
-
-        updateCartCount();
-
-        tampilkanKeranjang();
-      }
-
-      /* ==========================================
-       HAPUS ITEM
-    ========================================== */
-
-      function hapusItem(index) {
-        keranjang.splice(index, 1);
-
-        updateCartCount();
-
-        tampilkanKeranjang();
-      }
-
-      /* ==========================================
-       FORMAT RUPIAH
-    ========================================== */
-
-      function formatRupiah(angka) {
-        return new Intl.NumberFormat("id-ID", {
-          style: "currency",
-          currency: "IDR",
-          minimumFractionDigits: 0,
-        }).format(angka);
-      }
-
-      /* ==========================================
-       PESAN SEKARANG
-    ========================================== */
-
-      function pesanSekarang() {
-        if (keranjang.length === 0) {
-          alert("Keranjang kamu masih kosong!");
-
-          return;
-        }
-
-        let total = 0;
-
-        keranjang.forEach(function (item) {
-          total += item.harga * item.jumlah;
-        });
-
-        document.getElementById("orderTotal").innerText =
-          "Total: " + formatRupiah(total);
-
-        const cartModalElement = document.getElementById("cartModal");
-
-        const cartModal = bootstrap.Modal.getInstance(cartModalElement);
-
-        if (cartModal) {
-          cartModal.hide();
-        }
-
-        const orderModal = new bootstrap.Modal(
-          document.getElementById("orderModal"),
-        );
-
-        orderModal.show();
-      }
-
-      /* ==========================================
-       FILTER MENU
-    ========================================== */
-
-      function filterMenu(kategori, tombol) {
-        const semuaMenu = document.querySelectorAll(".menu-item");
-
-        semuaMenu.forEach(function (menu) {
-          if (kategori === "semua" || menu.dataset.category === kategori) {
-            menu.style.display = "block";
-          } else {
-            menu.style.display = "none";
-          }
-        });
-
-        document.querySelectorAll(".category-btn").forEach(function (btn) {
-          btn.classList.remove("active");
-        });
-
-        tombol.classList.add("active");
-      }
-
-      /* ==========================================
-       FORM KONTAK
-    ========================================== */
-
-      function kirimPesan() {
-        const nama = document.getElementById("nama").value;
-
-        const confirmModalElement = document.getElementById("confirmModal");
-
-        const confirmModal = bootstrap.Modal.getInstance(confirmModalElement);
-
-        if (confirmModal) {
-          confirmModal.hide();
-        }
-
-        setTimeout(function () {
-          alert("Terima kasih, " + nama + "! Pesan kamu berhasil dikirim.");
-
-          document.getElementById("contactForm").reset();
-        }, 300);
-      }
-
-      /* ==========================================
-       CONSOLE
-    ========================================== */
-
-      console.log("=== KOPI KAMPUS ===");
-      console.log("Website Bootstrap 5 berhasil dijalankan.");
-      console.log("Menu tersedia: 30 pilihan.");
-      console.log("Fitur keranjang aktif.");
-    </script>
   </body>
 </html>
